@@ -146,4 +146,13 @@
 - [`3.0.0-alpha1-runtime-deps-stretch-slim-arm32v7`, `3.0-runtime-deps-stretch-slim-arm32v7`, `3.0.0-alpha1-runtime-deps`, `3.0-runtime-deps` (*3.0/runtime-deps/stretch-slim/arm32v7/Dockerfile*)](https://github.com/dotnet/dotnet-docker/blob/nightly/3.0/runtime-deps/stretch-slim/arm32v7/Dockerfile)
 - [`3.0.0-alpha1-runtime-deps-bionic-arm32v7`, `3.0-runtime-deps-bionic-arm32v7` (*3.0/runtime-deps/bionic/arm32v7/Dockerfile*)](https://github.com/dotnet/dotnet-docker/blob/nightly/3.0/runtime-deps/bionic/arm32v7/Dockerfile)
 
+# Linux arm64 tags
+
+**.NET Core 3.0 Alpha 1 tags**
+
+- [`3.0.0-alpha1-runtime-stretch-slim-arm64v8`, `3.0-runtime-stretch-slim-arm64v8`, `3.0.0-alpha1-runtime`, `3.0-runtime` (*3.0/runtime/stretch-slim/arm64v8/Dockerfile*)](https://github.com/dotnet/dotnet-docker/blob/nightly/3.0/runtime/stretch-slim/arm64v8/Dockerfile)
+- [`3.0.0-alpha1-runtime-bionic-arm64v8`, `3.0-runtime-bionic-arm64v8` (*3.0/runtime/bionic/arm64v8/Dockerfile*)](https://github.com/dotnet/dotnet-docker/blob/nightly/3.0/runtime/bionic/arm64v8/Dockerfile)
+- [`3.0.0-alpha1-runtime-deps-stretch-slim-arm64v8`, `3.0-runtime-deps-stretch-slim-arm64v8`, `3.0.0-alpha1-runtime-deps`, `3.0-runtime-deps` (*3.0/runtime-deps/stretch-slim/arm64v8/Dockerfile*)](https://github.com/dotnet/dotnet-docker/blob/nightly/3.0/runtime-deps/stretch-slim/arm64v8/Dockerfile)
+- [`3.0.0-alpha1-runtime-deps-bionic-arm64v8`, `3.0-runtime-deps-bionic-arm64v8` (*3.0/runtime-deps/bionic/arm64v8/Dockerfile*)](https://github.com/dotnet/dotnet-docker/blob/nightly/3.0/runtime-deps/bionic/arm64v8/Dockerfile)
+
 For more information about these images and their history, please see [the relevant Dockerfile](https://github.com/dotnet/dotnet-docker/search?utf8=%E2%9C%93&q=FROM&type=Code). These images are updated via [pull requests to the `dotnet/dotnet-docker` GitHub repo](https://github.com/dotnet/dotnet-docker/pulls).
