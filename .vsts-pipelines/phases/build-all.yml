@@ -29,6 +29,14 @@ phases:
       dockerServerDemands:
         - RemoteDockerServerOS -equals linux
         - RemoteDockerServerArch -equals arm32v7
+  - template: build-images-linux-client.yml
+    parameters:
+      phase: Build_Linux_arm64v8
+      matrix: $[ dependencies.GenerateMatrices.outputs['buildMatrix.buildMatrixLinuxArm64v8'] ]
+      useRemoteDockerServer: true
+      dockerDemands:
+        - RemoteDockerServerOS -equals linux
+        - RemoteDockerServerArch -equals arm64v8
   - template: build-images-windows-client.yml
     parameters:
       phase: Build_NanoServerSac2016_amd64
@@ -67,7 +75,16 @@ phases:
         - RemoteDockerServerOS -equals linux
         - RemoteDockerServerArch -equals arm32v7
       architecture: arm
-      optionalTestArgs: -DisableHttpVerification
+  - template: test-images-linux-client.yml
+    parameters:
+      phase: Test_Linux_arm64v8
+      buildDependencies: Build_Linux_arm64v8
+      matrix: $[ dependencies.GenerateMatrices.outputs['buildMatrix.testMatrixLinuxArm64v8'] ]
+      useRemoteDockerServer: true
+      dockerDemands:
+        - RemoteDockerServerOS -equals linux
+        - RemoteDockerServerArch -equals arm64v8
+      architecture: arm64
   - template: test-images-windows-client.yml
     parameters:
       phase: Test_NanoServerSac2016_amd64
@@ -100,6 +117,11 @@ phases:
       phase: Copy_Images_Linux_arm32v7
       architecture: arm
       matrix: $[ dependencies.GenerateMatrices.outputs['buildMatrix.buildMatrixLinuxArm32v7'] ]
+  - template: copy-images-linux.yml
+    parameters:
+      phase: Copy_Images_Linux_arm64v8
+      architecture: arm64
+      matrix: $[ dependencies.GenerateMatrices.outputs['buildMatrix.buildMatrixLinuxArm64v8'] ]
   - template: copy-images-windows.yml
     parameters:
       phase: Copy_Images_NanoServerSac2016_amd64
